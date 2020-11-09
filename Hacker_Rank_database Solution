@@ -41,7 +41,7 @@ What is the count of rows returned in the following relational selection?
 
 Only enter a single integer. Do not include any extra spaces or newlines.
 
-Solution - for sigma less than 3000 for numbers column we have "2" rows,
+Solution - for sigma less than 3000 for "Number" column we have "2" rows,
 
 
 Question - 6 Consider the following data table named Student.
@@ -50,9 +50,22 @@ Name                Number  Sex
 Nina                3412    F 
 Mike                1234    M  
 Nelson              2341    F  
+
 What is the count of attributes (columns) returned in the following projection?
 π(Name, Number)(Student)
 
 Only enter a single integer. Do not include any extra spaces or new
 
 Solution - "2" is count of columns as here attributes numbers are queried not number of rows
+
+
+Question - 7 Which is a join condition contains an equality operator?
+Solution - Equijoins
+
+
+Question - 8 In precedence of set operators the expression is evaluated from:
+Solution - Left to Right
+
+
+Question - 9 Using which language can a user request information from a database ?
+Solution - Query 
