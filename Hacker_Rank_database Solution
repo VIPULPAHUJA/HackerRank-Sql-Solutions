@@ -69,3 +69,21 @@ Solution - Left to Right
 
 Question - 9 Using which language can a user request information from a database ?
 Solution - Query 
+
+
+Question - 10 The_____ operation allows the combining of two relations by merging pairs of tuples, one from each relation, into a single tuple.
+Solution - Join
+
+
+Question - 11 Which one of the following is a procedural language ?
+Solution - Relational Algebra
+
+
+Question - 12 The result which operation contains all pairs of tuples from the two relations, regardless of whether their attribute values match.
+Solution - Cartesian Product
+
+ 
+
+
+
+
