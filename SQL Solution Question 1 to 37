@@ -231,11 +231,48 @@ and LAT_N < 137.2345;
 
 
 
-Question - 32 Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than . Truncate your answer to 4 decimal places.
+Question - 32 Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 137.2345 . Truncate your answer to 4 decimal places.
 Solution - select round(max(LAT_N),4)
 from station 
 where LAT_N<137.2345;
 
+
+Question - 33 Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than 137.2345.
+Round your answer to 4 decimal places.
+Solution - select round(LONG_W,4) from station
+where LAT_N = (select max(LAT_N) from station where LAT_N < 137.2345);
+
+
+Question - 34 Query the smallest Northern Latitude (LAT_N) from STATION that is greater than 38.7780. Round your answer to 4 decimal.
+Solution - select round(min(LAT_N),4)
+from station
+where LAT_N > 38.7780;
+
+
+Question - 35 Query the Western Longitude (LONG_W)where the smallest Northern Latitude (LAT_N) in STATION is greater than 38.7780 . 
+Round your answer to 4 decimal places.
+Solution - select round(min(LONG_W),4) 
+from station 
+where LAT_N = ( select min(LAT_N) from station where LAT_N > 38.7780) ;
+
+
+Question - 36 Given the CITY and COUNTRY tables, query the sum of the populations of all cities where the CONTINENT is 'Asia'.
+Solution - Select sum(city.population)
+from city inner join country 
+on city.countrycode=country.code
+and country.continent = "Asia";
+
+
+Question - 37 - Consider  and  to be two points on a 2D plane.
+
+"a" happens to equal the minimum value in Northern Latitude (LAT_N in STATION).
+"b" happens to equal the minimum value in Western Longitude (LONG_W in STATION).
+"c" happens to equal the maximum value in Northern Latitude (LAT_N in STATION).
+"d" happens to equal the maximum value in Western Longitude (LONG_W in STATION).
+Query the Manhattan Distance between points  and  and round it to a scale of 4 decimal places.
+
+Solution - select round(abs(min(LAT_N)-max(LAT_N)) + abs(min(LONG_W)-max(LONG_W)),4)
+from station;
 
 
 
