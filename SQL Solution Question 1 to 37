@@ -308,7 +308,7 @@ group by country.continent;
 
 
 
-Question - 16 P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
+Question - 42 P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
 * * * * * 
 * * * * 
 * * * 
@@ -318,4 +318,18 @@ Write a query to print the pattern P(20).
 
 Solution - SET @NUMBER = 21;
            SELECT REPEAT('* ', @NUMBER := @NUMBER - 1)
+              FROM information_schema.tables LIMIT 20;
+
+
+Question - 43 - P(R) represents a pattern drawn by Julia in R rows. The following pattern represents P(5):
+* 
+* * 
+* * * 
+* * * * 
+* * * * *
+
+Write a query to print the pattern P(20).
+
+Solution - SET @NUMBER = 0;
+           SELECT REPEAT('* ', @NUMBER := @NUMBER + 1)
               FROM information_schema.tables LIMIT 20;
