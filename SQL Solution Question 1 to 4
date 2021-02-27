@@ -29,3 +29,39 @@ Question - 3 Query all columns (attributes) for every row in the CITY table.
 Solution - For Mysql and oracle Sql:-
 
 select * from city;
+
+Question - 4 Query all columns for a city in CITY with the ID 1661.
+Solution :- For Mysql and oracle sql :-
+
+select * from city
+where id=1661;
+
+
+Question - 5 Query all attributes of every Japanese city in the CITY table. The COUNTRYCODE for Japan is JPN.
+Solution :- A. For oracle sql :-
+
+select * from city
+where countrycode='JPN';
+
+B. For mysql :-
+select * from city
+where countrycode="JPN"
+
+
+Question - 6 Query the names of all the Japanese cities in the CITY table. The COUNTRYCODE for Japan is JPN.
+Solution :- A. For oracle sql :-
+
+select name from city
+where countrycode='JPN';
+
+B. For mysql :-
+
+select name from city
+where countrycode="JPN";
+
+
+Question - 7 Query a list of CITY and STATE from the STATION table.
+Solution :- For Mysql and oracle sql :-
+
+select city , state
+from station;
